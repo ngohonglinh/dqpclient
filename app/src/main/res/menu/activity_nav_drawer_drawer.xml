@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_ChuyenBien"
+            android:icon="@drawable/ship"
+            android:title="Dự án" />
+        <item
+            android:id="@+id/nav_Chi"
+            android:icon="@drawable/chi"
+            android:title="Sở phí" />
+        <item
+            android:id="@+id/nav_Thu"
+            android:icon="@drawable/thu"
+            android:title="Doanh thu" />
+        <item
+            android:id="@+id/nav_DebtBook"
+            android:icon="@drawable/debt"
+            android:title="Sổ ứng tiền" />
+        <item
+            android:id="@+id/nav_DiemDD"
+            android:icon="@drawable/likemenu"
+            android:title="Đánh giá đồng đội" />
+
+    </group>
+    <item android:title="Manager functions">
+        <menu>
+            <item
+                android:id="@+id/nav_DMHS"
+                android:icon="@drawable/list"
+                android:title="Sản phẩm" />
+        </menu>
+    </item>
+
+    <item android:title="Administrator functions">
+        <menu>
+            <item
+                android:id="@+id/nav_DoiTac"
+                android:icon="@drawable/providers"
+                android:title="Providers" />
+            <item
+                android:id="@+id/nav_KhachHang"
+                android:icon="@drawable/customers"
+                android:title="Customers" />
+            <item
+                android:id="@+id/nav_users"
+                android:icon="@drawable/user"
+                android:title="Users" />
+            <item
+                android:id="@+id/nav_Ticket"
+                android:icon="@drawable/dstv"
+                android:title="Ticket manager" />
+            <item
+                android:id="@+id/nav_Setting"
+                android:icon="@drawable/setting"
+                android:title="Tùy biến ứng dụng" />
+        </menu>
+    </item>
+
+</menu>

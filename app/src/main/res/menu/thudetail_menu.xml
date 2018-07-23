@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/id_new"
+        android:orderInCategory="1"
+        android:title="New..." />
+    <item
+        android:id="@+id/id_edit"
+        android:orderInCategory="2"
+        android:title="Edit..."
+        />
+    <item
+        android:id="@+id/id_delete"
+        android:orderInCategory="3"
+        android:title="Delete..."/>
+    <item
+        android:id="@+id/save"
+        android:icon="@drawable/save"
+        app:showAsAction="ifRoom|withText"
+        android:title="Save"/>
+    <item
+        android:id="@+id/newprice"
+        android:icon="@drawable/newprice"
+        app:showAsAction="ifRoom|withText"
+        android:title="fetch new price"/>
+    <item
+        android:orderInCategory="6"
+        android:id="@+id/id_exit"
+        android:icon="@drawable/exit"
+        android:title="Exit..." />
+</menu>

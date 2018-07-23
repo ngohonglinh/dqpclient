@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@+id/grp1" >
+        <item
+            android:id="@+id/id_dstv_new"
+            android:orderInCategory="1"
+            android:title="New..." />
+        <item
+            android:id="@+id/id_dstv_edit"
+            android:orderInCategory="2"
+            android:title="Edit..."
+            />
+        <item
+            android:id="@+id/id_dstv_delete"
+            android:orderInCategory="3"
+            android:title="Delete..."
+            />
+        <item
+            android:orderInCategory="4"
+            android:id="@+id/save_dstv"
+            android:icon="@drawable/save"
+            app:showAsAction="ifRoom|withText"
+            android:title="Save"/>
+    </group>
+    <group android:id="@+id/grp2" >
+        <item
+            android:orderInCategory="5"
+            android:id="@+id/id_dstv_ungtien"
+            android:icon="@drawable/debtmenu"
+            app:showAsAction="ifRoom|withText"
+            android:title="Lính ứng tiền" />
+    </group>
+
+    <group android:id="@+id/grp3" >
+        <item
+            android:orderInCategory="6"
+            android:id="@+id/id_exit"
+            android:icon="@drawable/exit"
+            android:title="Exit..." />
+    </group>
+</menu>

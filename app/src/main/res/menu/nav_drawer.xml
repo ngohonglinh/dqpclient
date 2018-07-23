@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/NavSyncPull"
+        android:title="Sync Get new..."/>
+    <item
+        android:id="@+id/NavSyncPost"
+        android:title="Sync Post new..."/>
+    <item
+        android:id="@+id/NavSyncUpdate"
+        android:title="Sync Update..."/>
+    <item
+        android:id="@+id/NavSyncDelete"
+        android:title="Sync Delete..."/>
+    <item
+        android:id="@+id/NavSyncTinhVT"
+        android:title="Tính Vật Tư..."/>
+</menu>

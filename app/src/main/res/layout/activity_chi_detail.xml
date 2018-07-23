@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="8dp"
+    android:orientation="vertical"
+    tools:context="com.dqpvn.dqpclient.ChiDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0">
+
+        <TextView
+            android:id="@+id/tv_IdChiDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_RkeyChiDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_ChiDetailRkeyChi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_ChiDetailServerKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_ChiDetailUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:text="Đối tác: "
+            style="@style/myRightGravityTextview" />
+
+        <TextView
+            android:id="@+id/tv_ChiDetaiTenDoiTac"
+            android:text="Đối tác"
+            style="@style/myHorizontalEdtittext"
+            android:textColor="@color/colorBlack"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:text="Dự án: "
+            style="@style/myRightGravityTextview"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/aedt_ChuyenBienChiDetail"
+            style="@style/myHorizontalEdtittext"
+            android:inputType="number"
+            android:completionThreshold="1"
+            android:hint="Dự án" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <Spinner
+            android:id="@+id/spn_ChiDetailImagePath"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/tv_SanPhamChiDeTail"
+            android:layout_weight="3"
+            android:text="Sản phẩm: "
+            style="@style/myRightGravityTextview" />
+
+        <AutoCompleteTextView
+            android:id="@+id/aedt_SanPhamChiDeTail"
+            style="@style/myHorizontalEdtittext"
+            android:completionThreshold="1"
+            android:inputType="textPersonName"
+            android:hint="Sản phẩm" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_weight="3"
+            android:gravity="right"
+            android:text="Số Lượng"
+            style="@style/myRightGravityTextview"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_weight="3"
+            android:gravity="right"
+            android:text="Đơn Giá"
+            style="@style/myRightGravityTextview"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="Thành Tiền"
+            style="@style/myRightGravityTextview"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/edt_SLChiDetail"
+            style="@style/myHorizontalEdtittext"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:imeOptions="flagNavigateNext"
+            android:hint="Số lượng" />
+
+        <EditText
+            android:id="@+id/edt_DGChiDetail"
+            style="@style/myHorizontalEdtittext"
+            android:layout_weight="3"
+            android:gravity="right"
+            android:imeOptions="actionDone"
+            android:inputType="numberSigned"
+            android:hint="999,999,999" />
+
+        <EditText
+            android:id="@+id/edt_TTChiDetail"
+            style="@style/myHorizontalEdtittext"
+            android:layout_weight="4"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:hint="999,999,999" />
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lv_ChiDetail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.LinearLayoutCompat>

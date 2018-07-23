@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">DQP Client</string>
+    <string name="server_address">http://dqpapps.tk:8002</string>
+    <string name="title_activity_nav_drawer">DQP Client</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string-array name="lydo_array">
+        <item>Nhập hàng</item>
+        <item>Chi trả nợ</item>
+        <item>Chi khác</item>
+        <item>Có VAT</item>
+        <item>...</item>
+    </string-array>
+    <string-array name="lydo_thu_array">
+        <item>Bán hàng</item>
+        <item>Thu tiền nợ</item>
+        <item>Thu khác</item>
+        <item>...</item>
+    </string-array>
+    <string-array name="chucvu_array">
+        <item>Thuyền trưởng</item>
+        <item>Nhân lực</item>
+        <item>Máy trưởng</item>
+        <item>Kỹ thuật</item>
+        <item>Khác...</item>
+    </string-array>
+
+    <string name="title_activity_fullscreen_image">DQP Client</string>
+    <string name="dummy_button">Back</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

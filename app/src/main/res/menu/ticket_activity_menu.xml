@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/id_new_ticket"
+        android:orderInCategory="1"
+        android:title="New..." />
+    <item
+        android:id="@+id/id_edit_ticket"
+        android:orderInCategory="2"
+        android:title="Edit..."
+        />
+    <item
+        android:id="@+id/id_delete_ticket"
+        android:orderInCategory="3"
+        android:title="Delete..."/>
+    <item
+        android:orderInCategory="4"
+        android:id="@+id/save_ticket"
+        android:icon="@drawable/save"
+        app:showAsAction="ifRoom|withText"
+        android:title="Save"/>
+    <item
+        android:orderInCategory="5"
+        android:id="@+id/detail_ticket"
+        android:icon="@drawable/detail"
+        app:showAsAction="ifRoom|withText"
+        android:title="Detail"/>
+    <item
+        android:orderInCategory="6"
+        android:id="@+id/id_exit"
+        android:icon="@drawable/exit"
+        android:title="Exit..." />
+</menu>

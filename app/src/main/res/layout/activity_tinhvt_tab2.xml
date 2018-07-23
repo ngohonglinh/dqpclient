@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="16dp"
+    android:orientation="vertical"
+    android:weightSum="18">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+            android:layout_weight="1.5"
+            style="@style/myRightGravityTextview"
+            android:text="Đv1: " />
+        <EditText
+            android:layout_weight="3.5"
+            android:id="@+id/edt_tab2_dv1_1"
+            style="@style/myHorizontalEdtittext"
+            android:hint="Đơn vị 1"
+            android:imeOptions="flagNavigateNext"
+            android:inputType="numberDecimal" />
+        <TextView
+            android:layout_weight="1.5"
+            style="@style/myRightGravityTextview"
+            android:text="Đv2: " />
+        <EditText
+            android:layout_weight="3.5"
+            android:id="@+id/edt_tab2_dv2_1"
+            style="@style/myHorizontalEdtittext"
+            android:hint="Đơn vị 2"
+            android:imeOptions="flagNavigateNext"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+            android:layout_weight="1.5"
+            style="@style/myRightGravityTextview"
+            android:text="Đv1: " />
+        <EditText
+            android:layout_weight="3.5"
+            android:id="@+id/edt_tab2_dv1_2"
+            style="@style/myHorizontalEdtittext"
+            android:hint="Đơn vị 1"
+            android:imeOptions="flagNavigateNext"
+            android:inputType="numberDecimal" />
+        <TextView
+            android:layout_weight="1.5"
+            style="@style/myRightGravityTextview"
+            android:text="Đv2: " />
+        <EditText
+            android:layout_weight="3.5"
+            android:id="@+id/edt_tab2_dv2_2"
+            style="@style/myHorizontalEdtittext"
+            android:hint="'???'"
+            android:focusable="false"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+
+</android.support.v7.widget.LinearLayoutCompat>

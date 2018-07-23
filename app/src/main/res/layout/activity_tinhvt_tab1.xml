@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="16dp"
+    android:orientation="vertical"
+    android:weightSum="18">
+
+
+    <LinearLayout
+        android:id="@+id/ly_NhomVT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                style="@style/myRightGravityTextview"
+                android:text="Nhóm vật tư: " />
+            <Spinner
+                android:id="@+id/spn_TinhTVNhomVT"
+                style="@style/myHorizontalEdtittext"
+                android:hint="Nhóm vật tư"
+                android:textColor="@color/colorAccent"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:id="@+id/ly_TinhVTGach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                style="@style/myRightGravityTextview"
+                android:text="Size gạch: " />
+            <Spinner
+                android:id="@+id/spn_TinhVTSizeGach"
+                style="@style/myHorizontalEdtittext"
+                android:hint="User name"
+                android:textColor="@color/colorAccent"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                style="@style/myRightGravityTextview"
+                android:text="Viêns/Thùng: " />
+            <EditText
+                android:layout_weight="4"
+                android:id="@+id/edt_TinhVTVienPThung"
+                style="@style/myHorizontalEdtittext"
+                android:hint="Số viên/thùng"
+                android:focusable="false"
+                android:imeOptions="flagNavigateNext"
+                android:inputType="number" />
+            <EditText
+                android:layout_weight="2"
+                style="@style/myHorizontalEdtittext"
+                android:imeOptions="actionDone"
+                android:text="viên"
+                android:focusable="false"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                style="@style/myRightGravityTextview"
+                android:text="Khấu hao: " />
+            <Spinner
+                android:id="@+id/spn_TinhVTKhauHao"
+                style="@style/myHorizontalEdtittext"
+                android:hint="Khấu hao"
+                android:textColor="@color/colorAccent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                style="@style/myRightGravityTextview"
+                android:text="S yêu cầu: " />
+            <EditText
+                android:layout_weight="4"
+                android:id="@+id/edt_TinhVTYeuCau"
+                style="@style/myHorizontalEdtittext"
+                android:imeOptions="actionDone"
+                android:hint="Diện tích"
+                android:inputType="numberDecimal" />
+            <EditText
+                android:layout_weight="2"
+                style="@style/myHorizontalEdtittext"
+                android:imeOptions="actionDone"
+                android:text="m²"
+                android:focusable="false"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:id="@+id/ly_TinhVTThepTam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                style="@style/myRightGravityTextview"
+                android:text="Độ dày: " />
+            <EditText
+                android:layout_weight="4"
+                android:id="@+id/edt_TinhVTThepTamT"
+                style="@style/myHorizontalEdtittext"
+                android:hint="Độ dày"
+                android:imeOptions="flagNavigateNext"
+                android:inputType="numberDecimal" />
+            <EditText
+                android:layout_weight="2"
+                style="@style/myHorizontalEdtittext"
+                android:text="mm"
+                android:focusable="false"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                style="@style/myRightGravityTextview"
+                android:text="Chiều rộng: " />
+            <EditText
+                android:layout_weight="4"
+                android:id="@+id/edt_TinhVTThepTamW"
+                style="@style/myHorizontalEdtittext"
+                android:hint="Chiều rộng"
+                android:imeOptions="flagNavigateNext"
+                android:inputType="number" />
+            <EditText
+                android:layout_weight="2"
+                style="@style/myHorizontalEdtittext"
+                android:text="mm"
+                android:focusable="false"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                style="@style/myRightGravityTextview"
+                android:text="Chiều dài: " />
+            <EditText
+                android:layout_weight="4"
+                android:id="@+id/edt_TinhVTThepTamL"
+                style="@style/myHorizontalEdtittext"
+                android:hint="Chiều dài"
+                android:imeOptions="actionDone"
+                android:inputType="number" />
+            <EditText
+                android:layout_weight="2"
+                style="@style/myHorizontalEdtittext"
+                android:text="mm"
+                android:focusable="false"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:id="@+id/ly_TinhVTThepOng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                style="@style/myRightGravityTextview"
+                android:text="Độ dày: " />
+            <EditText
+                android:layout_weight="4"
+                android:id="@+id/edt_TinhVTThepOngT"
+                style="@style/myHorizontalEdtittext"
+                android:hint="Độ dày"
+                android:imeOptions="flagNavigateNext"
+                android:inputType="numberDecimal" />
+            <EditText
+                android:layout_weight="2"
+                style="@style/myHorizontalEdtittext"
+                android:text="mm"
+                android:focusable="false"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                style="@style/myRightGravityTextview"
+                android:text="Đường kính: " />
+            <EditText
+                android:layout_weight="4"
+                android:id="@+id/edt_TinhVTThepOngD"
+                style="@style/myHorizontalEdtittext"
+                android:hint="Đường kính"
+                android:imeOptions="flagNavigateNext"
+                android:inputType="numberDecimal" />
+            <EditText
+                android:layout_weight="2"
+                style="@style/myHorizontalEdtittext"
+                android:text="mm"
+                android:focusable="false"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                style="@style/myRightGravityTextview"
+                android:text="Chiều dài: " />
+            <EditText
+                android:layout_weight="4"
+                android:id="@+id/edt_TinhVTThepOngL"
+                style="@style/myHorizontalEdtittext"
+                android:hint="Chiều dài"
+                android:imeOptions="actionDone"
+                android:inputType="number" />
+            <EditText
+                android:layout_weight="2"
+                style="@style/myHorizontalEdtittext"
+                android:text="mm"
+                android:focusable="false"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ly_TinhVTTLR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+            style="@style/myRightGravityTextview"
+            android:text="D riêng: " />
+        <EditText
+            android:layout_weight="4"
+            android:id="@+id/edt_TinhVTThepTLR"
+            style="@style/myHorizontalEdtittext"
+            android:hint="Khối lượng riêng"
+            android:imeOptions="actionDone"
+            android:focusable="false"
+            android:inputType="numberDecimal" />
+        <EditText
+            android:layout_weight="2"
+            style="@style/myHorizontalEdtittext"
+            android:text="g/cm³"
+            android:focusable="false"/>
+    </LinearLayout>
+
+
+</android.support.v7.widget.LinearLayoutCompat>

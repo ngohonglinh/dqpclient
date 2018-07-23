@@ -1,0 +1,8 @@
+<sync-adapter
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:contentAuthority="com.dqpvn.dqpclient.syncAdapter.StubProvider"
+    android:accountType="dqpvn.com-DQPCLIENT"
+    android:userVisible="true"
+    android:supportsUploading="false"
+    android:allowParallelSyncs="false"
+    android:isAlwaysSyncable="true"/>

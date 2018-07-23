@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="16dp"
+    android:orientation="vertical"
+    android:weightSum="18"
+    tools:context="com.dqpvn.dqpclient.DebBookDetailActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0">
+
+        <TextView
+            android:id="@+id/tv_DebtBookDetailId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_DebtBookDetailRkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_DebtBookDetailServerKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_DebtBookDetailRkeyTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_DebtBookDetailRkeyTicket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            style="@style/myRightGravityTextview"
+            android:text="Ngày p/s: " />
+
+        <EditText
+            android:id="@+id/edt_DebtBookDetailNgayPS"
+            style="@style/myHorizontalEdtittext"
+            android:focusable="false"
+            android:hint="Ngày phát sinh"
+            android:inputType="date" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            style="@style/myRightGravityTextview"
+            android:text="Tên gọi: " />
+
+        <EditText
+            android:id="@+id/edt_DebtBookDetailTen"
+            style="@style/myHorizontalEdtittext"
+            android:focusable="false"
+            android:hint="Tên gọi" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            style="@style/myRightGravityTextview"
+            android:text="Lý do: " />
+
+        <EditText
+            android:id="@+id/edt_DebtBookDetailLydo"
+            style="@style/myHorizontalEdtittext"
+            android:hint="Lý do"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            style="@style/myRightGravityTextview"
+            android:text="Số tiền: " />
+
+        <EditText
+            android:id="@+id/edt_DebtBookDetailSoTien"
+            style="@style/myHorizontalEdtittext"
+            android:hint="Số tiền"
+            android:inputType="numberSigned"
+            android:imeOptions="actionDone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            style="@style/myRightGravityTextview"
+            android:text="Lưu sổ: " />
+
+        <EditText
+            android:id="@+id/edt_DebtBookDetailUserName"
+            style="@style/myHorizontalEdtittext"
+            android:focusable="false"
+            android:hint="User name"
+            android:textColor="@color/colorAccent"
+            android:imeOptions="actionDone"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">>
+
+        <ListView
+            android:id="@+id/lv_DebtBookDetail"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+        </ListView>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

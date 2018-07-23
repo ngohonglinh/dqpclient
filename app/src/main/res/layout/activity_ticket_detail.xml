@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="8dp"
+    android:orientation="vertical"
+    tools:context="com.dqpvn.dqpclient.TicketDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0">
+
+        <TextView
+            android:id="@+id/tv_IdTicketDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_TicketDetailRkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_RkeyTicket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_TicketDetailServerkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+            android:text="Giá trị: "
+            style="@style/myRightGravityTextview"/>
+
+        <EditText
+            android:layout_weight="5"
+            android:id="@+id/edt_Amount"
+            style="@style/myHorizontalEdtittext"
+            android:hint="Giá trị"
+            android:completionThreshold="2"
+            android:inputType="numberSigned" />
+        <CheckBox
+            android:id="@+id/chk_TicketDetailParentFisned"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+            android:text="Người dùng: "
+            style="@style/myRightGravityTextview" />
+        <AutoCompleteTextView
+            android:id="@+id/aedt_TicketDetailForUser"
+            style="@style/myHorizontalEdtittext"
+            android:hint="Người dùng"
+            android:inputType="textEmailAddress"
+            android:completionThreshold="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+            android:text="Ngày p/s: "
+            style="@style/myRightGravityTextview"/>
+        <EditText
+            android:id="@+id/edt_TicketDetailNgayPS"
+            style="@style/myHorizontalEdtittext"
+            android:hint="Ngày phát sinh"
+            android:focusable="false"
+            android:inputType="number"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+            android:text="Notes: "
+            style="@style/myRightGravityTextview" />
+        <EditText
+            android:id="@+id/edt_TicketDetailNotes"
+            style="@style/myHorizontalEdtittext"
+            android:hint="Notes..."
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:gravity="top|left"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            />
+    </LinearLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lv_TicketDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_weight="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ListView>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

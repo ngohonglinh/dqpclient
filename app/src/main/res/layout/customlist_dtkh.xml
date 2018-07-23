@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:id="@+id/customlist_dtkh_ly">
+
+    <TextView
+        android:id="@+id/customlist_dtkh_tv1"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="#fff"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:paddingLeft="8dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6">
+
+            <TextView
+                 android:id="@+id/customlist_dtkh_tv2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Truong Dinh Chien"
+                android:textColor="@color/colorWhite"
+                 android:textSize="16sp"
+                 android:textStyle="bold" />
+
+            <TextView
+                 android:id="@+id/customlist_dtkh_tv3"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="0918494941"
+                android:textColor="@color/colorWhite"
+                 android:textStyle="bold" />
+
+            <TextView
+                 android:id="@+id/customlist_dtkh_tv4"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:textStyle="italic|bold"
+                 android:text="262 To Hien Thanh" />
+        </LinearLayout>
+        <LinearLayout
+            android:paddingLeft="4dp"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:weightSum="10"
+            android:layout_height="match_parent"
+            android:layout_weight="4">
+
+            <TextView
+                android:id="@+id/customlist_dtkh_tv5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:gravity="right|center_vertical"
+                android:text="Khach hang no cty"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/customlist_dtkh_tv6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:gravity="right|center_vertical"
+                android:text="Du no"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

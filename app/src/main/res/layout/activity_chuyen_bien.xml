@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="8dp"
+    android:orientation="vertical"
+    tools:context="com.dqpvn.dqpclient.ChuyenBienActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0">
+        <TextView
+            android:id="@+id/tv_IdChuyenBien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+        android:id="@+id/tv_RkeyChuyenBien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_ChuyenBienServerKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <Spinner
+            android:layout_width="wrap_content"
+            android:id="@+id/spn_ChuyenBien"
+            style="@style/myHorizontalEdtittext"
+            android:layout_weight="10"
+            android:spinnerMode="dialog" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+            android:text="Tên dự án: "
+            style="@style/myRightGravityTextview"/>
+        <EditText
+            android:id="@+id/edt_TenTau"
+            style="@style/myHorizontalEdtittext"
+            android:hint="Tên dự án"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+            android:text="Ngày bắt đầu: "
+            style="@style/myRightGravityTextview" />
+        <EditText
+            android:id="@+id/edt_NgayKhoiHanh"
+            style="@style/myHorizontalEdtittext"
+            android:focusable="false"
+            android:hint="Chọn ngày"
+            android:inputType="date"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+            android:text="Ngày kết thúc: "
+            style="@style/myRightGravityTextview" />
+        <EditText
+            android:id="@+id/edt_NgayKetChuyen"
+            style="@style/myHorizontalEdtittext"
+            android:focusable="false"
+            android:hint="Chọn ngày"
+            android:inputType="date" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+            android:text="Soái ca: "
+            style="@style/myRightGravityTextview" />
+        <AutoCompleteTextView
+            android:id="@+id/aedt_ChuyenBienUsername"
+            style="@style/myHorizontalEdtittext"
+            android:imeOptions="actionDone"
+            android:hint="Username | Thuyền trưởng"
+            android:inputType="textPersonName"
+            android:layout_weight="4.6"
+            android:textColor="@color/colorAccent"/>
+        <EditText
+            android:id="@+id/edt_ChuyenBienDiemDD"
+            style="@style/myHorizontalEdtittext"
+            android:layout_weight="1.4"
+            android:focusable="false"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:textColor="@color/colorPurple"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+            android:id="@+id/tv_ChuyenBienDaChia"
+            android:visibility="gone"
+            android:text="Đã chia: "
+            style="@style/myRightGravityTextview" />
+        <CheckBox
+            android:id="@+id/chk_ChuyenBienDaChia"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_gravity="right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:text="Nhân lực: "
+            style="@style/myRightGravityTextview"/>
+        <TextView
+            android:id="@+id/tv_ChuyenBienDSTV"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/colorDeepPurple"
+            android:clickable="true"
+            android:text="DS Nhân lực"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:text="Tổng thu: "
+            style="@style/myRightGravityTextview"/>
+        <TextView
+            android:id="@+id/tv_TongThu"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/colorDeepPurple"
+            android:clickable="true"
+            android:text="Tổng thu"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:weightSum="10">
+        <TextView
+            android:text="Tổng chi: "
+            style="@style/myRightGravityTextview"/>
+        <TextView
+            android:id="@+id/tv_TongChi"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/colorDeepPurple"
+            android:text="Tổng chi"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

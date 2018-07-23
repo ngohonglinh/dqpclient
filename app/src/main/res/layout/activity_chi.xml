@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="8dp"
+    tools:context="com.dqpvn.dqpclient.ChiActivity">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0">
+
+                <TextView
+                    android:id="@+id/tv_IdChi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_ChiServerKey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_RkeyChi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_RkeyChiTicket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_ChiUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                   style="@style/myRightGravityTextview"
+                    android:text="Dự án: " />
+
+                <AutoCompleteTextView
+                    android:id="@+id/aedt_ChiChuyenBien"
+                    style="@style/myHorizontalEdtittext"
+                    android:completionThreshold="1"
+                    android:hint="Dự án"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:text="Đối tác: "
+                    style="@style/myRightGravityTextview" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/aedt_ChiDoiTac"
+                    style="@style/myHorizontalEdtittext"
+                    android:completionThreshold="1"
+                    android:hint="Đối tác"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:text="Ngày p/s: "
+            style="@style/myRightGravityTextview" />
+
+        <EditText
+            android:id="@+id/edt_ChiNgayPS"
+            style="@style/myHorizontalEdtittext"
+            android:focusable="false"
+            android:hint="Ngày phát sinh"
+            android:inputType="date" />
+    </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+                <Spinner
+                    android:id="@+id/spn_ChiNhomLyDo"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+                </Spinner>
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                   style="@style/myRightGravityTextview"
+                    android:text="Lý do: " />
+
+                <EditText
+                    android:id="@+id/edt_ChiLyDo"
+                    style="@style/myHorizontalEdtittext"
+                    android:inputType="textMultiLine"
+                    android:lines="2"
+                    android:gravity="top|left"
+                    android:layout_height="wrap_content"
+                    android:hint="Lý do" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/tv_ChiGiaTri"
+                    android:inputType="numberDecimal"
+                    android:text="Giá trị: "
+                    style="@style/myRightGravityTextview" />
+
+                <EditText
+                    android:id="@+id/edt_ChiGiaTri"
+                    style="@style/myHorizontalEdtittext"
+                    android:hint="Giá trị hóa đơn"
+                    android:layout_weight="4"
+                    android:inputType="numberSigned" />
+
+                <Button
+                    android:id="@+id/btn_ChiDetail"
+                    style="@android:style/Widget.Material.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="2"
+                    android:inputType="textPersonName"
+                    android:text="Detail" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/tv_ChiDaTra"
+                    android:text="Đã trả: "
+                    style="@style/myRightGravityTextview" />
+
+                <EditText
+                    android:layout_weight="4"
+                    android:id="@+id/edt_ChiDaTra"
+                    style="@style/myHorizontalEdtittext"
+                    android:imeOptions="actionDone"
+                    android:hint="Số tiền đã trã"
+                    android:inputType="numberSigned" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+                <Spinner
+                    android:id="@+id/spn_ChiImagePath"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:inputType="textPersonName" />
+                <TextView
+                    android:id="@+id/tv_ChiHoaDon"
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:clickable="true"
+                    android:textStyle="bold|italic"
+                    android:text="Hóa đơn đính kèm"
+                    style="@style/myTitleTextview" />
+                <Button
+                    android:id="@+id/btn_ChiTakePhoTo"
+                    style="@android:style/Widget.Material.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:inputType="textPersonName"
+                    android:text="New" />
+            </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_ChiHoaDon"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:color/transparent" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.LinearLayoutCompat>

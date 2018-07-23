@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="8dp"
+    android:orientation="vertical"
+    tools:context="com.dqpvn.dqpclient.DSTVActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0">
+
+        <TextView
+            android:id="@+id/tv_DSTVId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_DSTVRkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_DSTVServerkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_DSTVRkeyChuyenBien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_DSTVUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_DSTVTienChia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_DSTVTienMuon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_DSTVTienCanCa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_DSTVConLai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+            android:text="Dự án : "
+            android:id="@+id/tv_DSTVChuyenBien"
+            style="@style/myRightGravityTextview"
+            android:textColor="@color/colorDeepPurple"
+            android:textSize="18sp"
+            android:gravity="right"
+            android:layout_weight="7"/>
+    </LinearLayout>
+    <LinearLayout
+        android:paddingTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+            android:layout_weight="3.5"
+            android:text="Tên gọi: "
+            style="@style/myRightGravityTextview"/>
+
+        <EditText
+            android:id="@+id/edt_DSTVTen"
+            style="@style/myHorizontalEdtittext"
+            android:hint="Tên gọi"
+            android:completionThreshold="2"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+            android:layout_weight="3.5"
+            android:text="Chức vụ: "
+            style="@style/myRightGravityTextview"/>
+        <AutoCompleteTextView
+            android:id="@+id/aedt_DSTVNotes"
+            style="@style/myHorizontalEdtittext"
+            android:imeOptions="actionDone"
+            android:hint="Ghi chú thêm"
+            android:inputType="textPersonName"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+            android:layout_weight="3.5"
+            android:id="@+id/tv_DSTVDiem"
+            android:text="Điểm: "
+            style="@style/myRightGravityTextview" />
+        <EditText
+            android:layout_weight="1.5"
+            android:id="@+id/edt_DSTVDiem"
+            style="@style/myHorizontalEdtittext"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal" />
+        <EditText
+            android:layout_weight="2.5"
+            android:id="@+id/edt_DSTVTongDiem"
+            style="@style/myHorizontalEdtittext"
+            android:textColor="@color/colorAccent"
+            android:focusable="false"
+            android:gravity="center"
+            android:focusableInTouchMode="false"
+            android:inputType="numberDecimal" />
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/btn_DSTVLike"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:src="@drawable/like" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/tv_DSTVLike"
+            android:text="0"
+            android:gravity="center"
+            style="@style/myHorizontalEdtittext"
+            android:textColor="@color/colorDeepPurple"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lv_DSTV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ListView>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

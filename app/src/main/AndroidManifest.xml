@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dqpvn.dqpclient">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/DaiHuuDSF_Theme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <provider
+            android:name=".syncAdapter.StubProvider"
+            android:authorities="com.dqpvn.dqpclient.syncAdapter.StubProvider"
+            android:exported="false"
+            android:syncable="true" />
+
+        <service android:name=".syncAdapter.AuthenticatorService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+        <service
+            android:name=".syncAdapter.SyncService"
+            android:exported="true"
+            android:process=":sync">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+        <service
+            android:name=".crudmanager.updateSoftwareService"
+            android:exported="false" />
+
+        <activity
+            android:name=".NavDrawerActivity"
+            android:label="DQP Client"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ChuyenBienActivity"
+            android:label="Dự án"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".ChiActivity"
+            android:label="Quản lý chi phí"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".ChiDetailActivity"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".ThuActivity"
+            android:label="Quản lý thu nhập"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".KhachHangActivity"
+            android:label="Khách hàng"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".DoiTacActivity"
+            android:label="Đối tác"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".NoCtyActivity"
+            android:label="Nợ phải thu"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".CtyNoActivity"
+            android:label="Nợ phải trã"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".SettingActivity"
+            android:label="Settings"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".FullscreenImageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen_image"
+            android:theme="@style/FullscreenTheme" />
+        <activity android:name=".ReceiveContentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ThuByChuyenBienActivity" />
+        <activity android:name=".ChiByChuyenBienActivity" />
+        <activity
+            android:name=".TicketActivity"
+            android:label="My SÉC ✌‿✌"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".ChiByTicketActivity"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".UserActivity"
+            android:label="User Manager"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".DSTVActivity"
+            android:label="DS Nhân lực"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".DebtBookActivity"
+            android:label="Sổ ứng tiền"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".DebBookDetailActivity"
+            android:label="Chi tiết nợ"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".DiemDDActivity"
+            android:label="Đánh giá đồng đội"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".TicketDetailActivity"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <receiver
+            android:name=".crudmanager.SyncCheck"
+            android:process=":doRESTful">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="DQP Client"
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="stateAlwaysVisible">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DMHaiSanActivity"
+            android:label="Danh mục sản phẩm"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".ThuDetailActivity"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".BanHSDetailActivity"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".DebtBookByUserActivity"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".TinhVTActivity"></activity>
+    </application>
+
+</manifest>

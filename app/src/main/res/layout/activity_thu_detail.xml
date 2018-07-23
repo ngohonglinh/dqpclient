@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="8dp"
+    android:orientation="vertical"
+    tools:context="com.dqpvn.dqpclient.ThuDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0">
+
+        <TextView
+            android:id="@+id/tv_ThuDetailId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_ThuDetailRkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_ThuDetailRkeyThu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_ThuDetailServerKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_weight="3"
+            android:text="Sản phẩm: "
+            style="@style/myRightGravityTextview" />
+
+        <AutoCompleteTextView
+            android:layout_weight="3.5"
+            android:id="@+id/aedt_ThuDetailtenhs"
+            android:hint="Sản phẩm"
+            style="@style/myHorizontalEdtittext"
+            android:imeOptions="flagNavigateNext"
+            android:completionThreshold="1"
+            android:inputType="text"/>
+        <CheckBox
+            android:id="@+id/chk_ThuDetailAuto"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <EditText
+            android:layout_weight="2.5"
+            android:id="@+id/edt_ThuDetailSoluong2"
+            style="@style/myHorizontalEdtittext"
+            android:textColor="@color/colorAccent"
+            android:gravity="right"
+            android:focusableInTouchMode="false"
+            android:focusable="false"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_weight="3"
+            android:text="Số lượng: "
+            style="@style/myRightGravityTextview"/>
+
+        <EditText
+            android:layout_weight="3"
+            android:id="@+id/edt_ThuDetailSoluong"
+            style="@style/myHorizontalEdtittext"
+            android:inputType="numberDecimal"
+            android:hint="Số lượng"
+            android:imeOptions="actionDone"/>
+        <EditText
+            android:layout_weight="4"
+            android:id="@+id/tv_ThuDetailSoluongTongCong"
+            style="@style/myHorizontalEdtittext"
+            android:textColor="@color/colorAccent"
+            android:gravity="right"
+            android:focusableInTouchMode="false"
+            android:focusable="false"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ly_ThuDetailDGTT1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_weight="5"
+            android:gravity="right"
+            android:text="Đơn Giá"
+            style="@style/myRightGravityTextview"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_weight="5"
+            android:gravity="center"
+            android:text="Thành Tiền"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            style="@style/myRightGravityTextview"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_ThuDetailDGTT2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <EditText
+            android:id="@+id/edt_ThuDetailDonGia"
+            style="@style/myHorizontalEdtittext"
+            android:layout_weight="5"
+            android:gravity="right"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:hint="999,999,999" />
+
+        <EditText
+            android:id="@+id/edt_THuDetailThanhTien"
+            style="@style/myHorizontalEdtittext"
+            android:layout_weight="5"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:hint="999,999,999" />
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lv_ThuDetail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.LinearLayoutCompat>
